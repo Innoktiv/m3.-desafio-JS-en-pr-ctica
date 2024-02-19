@@ -44,24 +44,27 @@
     function validar(nombre,asunto,mensaje) {
         let pasamosLaValidacion = true;
         let validacionNombre = /[a-zA-Z]/gim;
+        
         if (validacionNombre.test(nombre) == false) {
             document.querySelector(".errorNombre").innerHTML = "Ingrese un nombre válido."
             pasamosLaValidacion = false;
         };
-        let validacionTelefono = /\d/gim;
 
-        if (validacionTelefono.test(telefono) == false) {
-            document.querySelector(".errorTelefono").innerHTML = "Ingrese un teléfono válido(sólo números)."
+        let validacionAsunto = /\d/gim;
+
+        if (validacionAsunto.test(asunto) == false) {
+            document.querySelector(".errorAsunto").innerHTML = "Ingrese un Asunto válido."
             pasamosLaValidacion = false;
         };
-        let validaciónEmail = /[A-Z0-9._%+-]+@[A-Z0-9-]+.[A-Z]/gim;
-        if (validaciónEmail.test(email) == false ) {
-            document.querySelector(".errorEmail").innerHTML = "Ingrese un correo válido."
+        
+        let validaciónMensaje = /[A-Z0-9._%+-]+@[A-Z0-9-]+.[A-Z]/gim;
+        if (validaciónMensaje.test(mensaje) == false ) {
+            document.querySelector(".errorMensaje").innerHTML = "Ingrese un correo válido."
         pasamosLaValidacion = false;
         };
         return pasamosLaValidacion;
     };
-};
+
         
 
 
